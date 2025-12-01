@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const User = require("../models/user"); // or "../models/User" if your file is capital U
+const User = require("../models/user"); 
 
 const protect = async (req, res, next) => {
   try {
@@ -37,8 +37,5 @@ const studentOnly = (req, res, next) => {
   next();
 };
 
-module.exports = {
-  protect,
-  teacherOnly,
-  studentOnly,
+module.exports = { protect, teacherOnly, studentOnly
 };
